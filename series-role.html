@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <script src="./OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="./css/OcasO-VINTAGE.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+
+        .actor{
+            width: 1440px;
+            position: relative;
+        }
+        .actor_text h2{
+            font-size: 40px;
+            top: 100px;
+            z-index: 1;
+            right: 34%;
+            position: absolute;
+        }
+        .line{
+            position: absolute;
+            right: 30%;
+            bottom: 10px;
+            width: 300px;
+        }
+        .point{
+            width: 600px;
+            position: absolute;
+            right: -400px;
+            bottom: 100px;
+        }
+        .point1{
+            width: 600px;
+            position: absolute;
+            bottom: 300px;
+        }      
+        .point3{
+            width: 600px;
+            position: absolute;
+            top: 200px;
+            right: -370px;
+        }   
+        .point4{
+            position: relative;
+            width: 200px;
+            bottom: 1035px;
+            left: 800px;
+        }
+        .character1{
+            position: relative;
+            top: 200px;
+            left: 110rem;
+            width: 420px;
+        }
+        .character1 p{
+            position: absolute;
+            color: aliceblue;
+            top: 100px;
+            line-height: 50px;
+            left: 120px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .character1 .botton{            
+            position: absolute;
+            background-color: #ED2424;
+            color: #f5f3ed;
+            padding: 15px;
+            left: 20px;
+            font-weight: bolder;
+            bottom: 70px;
+            border-radius: 10px;
+        }
+        .character2{
+            position: relative;
+            top: 100px;
+            z-index: 1;
+            left: 300px;
+            width: 500px;
+        }
+        .character2 p{
+            position: absolute;
+            color: aliceblue;
+            top: 150px;
+            line-height: 50px;
+            left: 30px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .character2 .botton{      
+            position: absolute;
+            background-color: #ED2424;
+            color: #f5f3ed;
+            padding: 15px;
+            left: 20px;
+            font-weight: bolder;
+            bottom: 10px;
+            border-radius: 10px;
+        }
+        .character3 {
+            position: relative;
+            z-index: 1;
+            left: 1000px;
+            width: 450px;
+        }
+        .character3 p{
+            position: absolute;
+            color: aliceblue;
+            top: 170px;
+            line-height: 28px;
+            left: 120px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .character3 .botton{            
+            position: absolute;
+            background-color: #ED2424;
+            color: #f5f3ed;
+            padding: 15px;
+            left: 20px;
+            font-weight: bolder;
+            bottom: 140px;
+            border-radius: 10px;
+        }
+        .poimt{
+            width: 200px;
+            position: relative;
+            border-radius: 0px;
+            right: 300px;
+        }
+        .poimt1{
+            width: 200px;
+            position: relative;
+            border-radius: 0px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html">  
+            <img src="./img/去背/logo.png" alt="OcasO VINTAGE" ></a>
+          </div>
+            <div class="nav">
+                <div class="nav_main">
+                    <ul class="onav">
+                        <li><a href="./index.html">最新消息</a></li>
+                        <li><a href="./index.html">熱門商品</a></li>
+                        <li><a href="./series role.html">系列角色</a></li>
+                        <li><a href="./index.html">關於我們</a></li>
+                    </ul>
+
+                    <div class="nav_sub">
+                        <ul class="top">
+                            <li class="onav_contact">
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    搜尋
+                                </a>
+                            </li>
+                            <li class="navi_contact">
+                                <a href="./sign_in.html" target="_blank">
+                                    <i class="fa-solid fa-user"></i>
+                                    會員
+                                </a>
+                            </li>
+                            <li class="navi_contact">
+                                <a href="./ask.html" target="_blank">
+                                    <i class="fa-solid fa-comments"></i>
+                                    詢問
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="bottom">
+                            <li class="navi_contact">
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    購物車
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </header>
+   
+    <div class="actor">
+        <div class="actor_text">
+            <h2>系列角色</h2> 
+        </div>
+            <div class="character1"> 
+                <img src="./img/Group 186 (1).png" alt="">
+                <p>Gremlins<br>小精靈</p>
+                <div class="botton">帶我回家</div>
+            </div>
+        <div class="character2">     
+            <img src="./img/去背/Group 189.png" alt="">
+            <p>Dennis The Menace<br>淘氣阿丹</p>
+            <div class="botton">帶我回家</div>
+        </div>
+
+        <div class="character3"> 
+            <img src="./img/去背/Group 190.png" alt="">
+            <p>E.T<br>外星人</p>
+            <div class="botton">帶我回家</div>
+        </div>
+
+
+        <div class="line">
+            <img src="./img/Vector 3.png" alt="">
+        </div>
+
+        <div class="point">
+            <img src="./img/Frame 153 (1).png" alt="">
+        </div>
+
+        <div class="point1">
+            <img src="./img/Frame 153 (1).png" alt="">
+        </div>
+
+        <div class="point3">
+            <img src="./img/Frame 153 (1).png" alt="">
+        </div>
+
+        <div class="point4">
+            <img src="./img/Frame 153 (1).png" alt="">
+        </div>
+
+        
+        
+
+        
+    </div>
+
+    <div class="footer">
+        <div class="shopping">
+            <div class="shopping1">
+                <ul>
+                    <li><h3>購物</h3></li>
+                    <li>全部商品</li>
+                    <li>會員登入</li>
+                    <li>購物說明</li>
+                </ul>
+            </div>
+            <div class="shopping2">    
+                <ul>
+                    <li><h3>幫助</h3></li>
+                    <li>關於我們</li>
+                    <li>隱私政策</li>
+                    <li>會員權益</li>
+                    <li>聯絡我們</li>
+                </ul>
+            </div>
+            <div class="shopping3">    
+                <ul>
+                    <li><h3>客戶服務</h3></li>
+                    <li>聯絡我們</li>
+                    <li>支付方式</li>
+                    <li>積分獎勵</li>
+                </ul>
+            </div>
+            <div class="shopping4">    
+                <ul>
+                    <li><h3>追蹤我們</h3></li>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                </ul>
+            </div>
+        </div> 
+        <div class="copyright">
+            <p>
+                Copyright © 2023 WiEdu Co. 保留所有權利。
+                隱私政策 使用條款
+                <br>
+                本網站為緯育前端班作品
+            </p>
+        </div>
+    </div>
+
+        
+
+</body>
+</html>

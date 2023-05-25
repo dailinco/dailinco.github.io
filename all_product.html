@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="./css/OcasO-VINTAGE.CSS">
+	<script src="./OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+	<script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- <link rel="stylesheet" href="../css/OcasO VINTAGE.CSS"> -->
+	<style>
+		html {
+			height: 100%;
+			font-size: 62.5%;
+			scroll-behavior: smooth;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+
+		body {
+			position: relative;
+			font-weight: 400;
+			color: #44514b;
+			font-size: 1.6rem;
+			line-height: 1.75;
+			margin: auto;
+			text-align: left;
+			letter-spacing: 0.02em;
+			background: #f5f3ed;
+			height: 100%;
+		}
+
+		li {
+			list-style: none;
+		}
+
+
+		/*基礎設定*/
+
+		p {
+			text-align: justify;
+			line-height: 2.0;
+			font-weight: 500;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			border: 0;
+			border-radius: 20px;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		.bold,
+		header, li:before {
+			line-height: 1.2;
+			font-size: 100%;
+			font-weight: 1000;
+		}
+
+		h2 {
+			margin: 0 0 40px 50px;
+			font-size: 30px;
+			z-index: 21;
+			position: sticky;
+		}
+		h3 {
+			font-size: 25px;
+			z-index: 21;
+			margin: 10px;
+			position: sticky;
+		}
+
+		a {
+			text-decoration: none;
+			color: #44514b;
+			transition: 0.2s ease-in-out;
+		}
+
+
+		a:hover {
+			text-decoration: none;
+			color: #c06223;
+		}
+
+		a.child:hover {
+			color: inherit;
+		}
+
+		a img {
+			transition: 0.6s ease-in-out;
+		}
+
+
+		/*--------------------------------------
+			header
+		--------------------------------------*/
+
+		/*主欄 */
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			z-index: 22;
+			align-content: center;
+			align-items: center;
+		}
+
+		header::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			background: #f5f3ed;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: 0.6s ease-in-out;
+		}
+
+
+		header .logo {
+			position: relative;
+		}
+
+		header .logo img {
+			width: 60px;
+			margin-top: 10px;
+			margin-left: 30px;
+		}
+
+		header .nav {
+			width: 100%;
+		}
+
+		header .nav_main {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 0 80px 0 0;
+			align-content: center;
+			align-items: center;
+			height: auto;
+		}
+
+		header .nav ul {
+			display: flex;
+			margin: 0;
+			position: relative;
+		}
+
+		header .onav li {
+			margin: 0 20px 0 0;
+			padding: 20px 0 10px 0;
+		}
+
+		header .onav li a {
+			font-size: 20px;
+		}
+
+		/* 側欄 */
+		header .nav_sub {
+			writing-mode: vertical-rl;
+			/* 文字直向 */
+			width: 85px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #f5f3ed;
+		}
+
+		header .nav_sub ul {
+			display: flex;
+			padding: 25px 0 0 0;
+		}
+
+		header .nav_sub ul.bottom {
+			padding: 0 0 25px 0;
+		}
+
+		header .nav_sub ul li {
+			/* line-height: 80px; */
+			margin-bottom: 18px;
+			font-size: 1.5rem;
+		}
+
+		header .nav_sub ul li a {
+			display: block;
+			font-size: 20px;
+			width: 100%;
+			padding: 20px 0 0 0;
+		}
+
+		/* 輪播圖  */
+		.owl-carousel .owl-theme .owl-loaded .owl-drag {
+			width: 70%;
+			height: 20%;
+		}
+
+		.owl-stage-outer.owl-height {
+			height: 1000px !important;
+		}
+
+		/* 商品 */
+		.all_text {
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		.card_list {
+			display: flex;
+			justify-content: start;
+			padding-right: 200px;
+			margin: 0 20px;
+		}
+		.line{
+			background-color: #8D7B68;
+			width: 100px;
+			height: 2px;
+		}
+
+		.card {
+			width: 300px;
+			/* border: 1px solid #000; */
+			position: relative;
+			margin: 30px;
+			overflow: hidden;
+		}
+
+		.txt {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 10px 0 10px 10px;
+			background-color: #0008;
+			color: #fff;
+			transform: translateY(100%);
+			transition: 1s;
+		}
+		.txt a{
+			color: #fff;
+		}
+		.card:hover .txt {
+			background-color: #000c;
+			transform: translateY(10%);
+		}
+
+		.card img {
+			width: 100%;
+			vertical-align: top;
+		}
+
+		/* 分類 */
+		.classification {
+			position: relative;
+			margin-left: 30px;
+			width: 200px;
+		}
+		.card_group{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			flex-wrap: wrap;
+		}
+
+		/* 結尾 */
+		.footer {
+			padding: 40px;
+			position: relative;
+			background-color: #8D7B68;
+			color: #fff;
+			height: 300px;
+		}
+
+		.shopping {
+			width: 1200px;
+
+		}
+
+		.footer .shopping {
+			display: flex;
+			position: absolute;
+			left: 300px;
+		}
+
+		.footer .shopping {
+			gap: 40px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+		}
+
+		.footer .shopping4 {
+			position: absolute;
+			right: 30px;
+		}
+
+		.button p {
+			border: 1px solid rgba(0, 0, 0, .20);
+		}
+
+		.copyright {
+			position: absolute;
+			left: 300px;
+			bottom: 50px;
+			color: rgba(0, 0, 0, .45);
+			font-size: 15px;
+			font-weight: 400;
+		}
+	</style>
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+        <div class="logo">
+            <a href="./index.html">  
+            <img src="./img/去背/logo.png" alt="OcasO VINTAGE" ></a>
+        </div>
+		<div class="nav">
+			<div class="nav_main">
+				<ul class="onav">
+					<li><a href="./index.html">最新消息</a></li>
+					<li><a href="./index.html">熱門商品</a></li>
+					<li><a href="./series role.html">系列角色</a></li>
+					<li><a href="./index.html">關於我們</a></li>
+				</ul>
+
+				<div class="nav_sub">
+					<ul class="top">
+						<li class="onav_contact">
+							<a href="#" target="_blank">
+								<i class="fa-solid fa-magnifying-glass"></i>
+								搜尋
+							</a>
+						</li>
+						<li class="navi_contact">
+							<a href="./sign_in.html" target="_blank">
+								<i class="fa-solid fa-user"></i>
+								會員
+							</a>
+						</li>
+						<li class="navi_contact">
+							<a href="./ask.html" target="_blank">
+								<i class="fa-solid fa-comments"></i>
+								詢問
+							</a>
+						</li>
+					</ul>
+					<ul class="bottom">
+						<li class="navi_contact">
+							<a href="#" target="_blank">
+								<i class="fa-solid fa-cart-shopping"></i>
+								購物車
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="owl-carousel owl-theme owl-loaded owl-drag">
+		<div><img src="./img/Home.png"></div>
+		<div> <img src="./img/7.png"> </div>
+	</div>
+
+	<h2 class="all_text">全部商品</h2>
+	<div class="card_list">
+		<div class="classification">
+			<h3>分類</h3>
+			<div class="line"></div>
+			<a href="#">
+				<h4>玩具總動員</h4>
+			</a>
+			<a href="#">
+				<h4>陶器阿丹</h4>
+			</a>
+			<a href="#">
+				<h4>鬼馬小精靈</h4>
+			</a>
+			<a href="#">
+				<h4>恐龍家族</h4>
+			</a>
+		</div>
+		<div class="card_group">
+
+			<div class="card">
+				<div class="pic">
+						<img src="./img/343985651_6339468649447996_6309650925751397861_n (1).jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						1983 ET 發聲玩具 拉繩 會說話<br>
+						$1,580
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/0a43b204fba1259db109eb8be59aeca1_tn.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						1983 ET 發聲玩具 拉繩 會說話<br>
+						$1,580
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/342052049_237982125414115_860168734461506011_n.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						1991 恐龍家族 Baby Sinclair<br>
+						NT1,000
+
+					</h4>
+				</div>
+			</div>
+			<!-- </div>
+	
+		<div class="card_list"> -->
+			<div class="card">
+				<div class="pic">
+					<img src="../img/58f20d9d6bf4bad10a2e3ff891ece894.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						1976 麥當勞 紀念 陶瓷 夜燈<br>
+						$3,000
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="../img/7366bbb37a6d47c09432c1521588b6ee.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						玩具總動員 阿薛的狗 Sid<br>
+						$1,080
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/341940298_1272351587024714_5545316360889546308_n.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						E.T. 幻燈機 太空艙 Wendy’s Burger<br>
+						$590~$690
+
+					</h4>
+				</div>
+			</div>
+			<!-- </div>
+		
+		<div class="card_list"> -->
+			<div class="card">
+				<div class="pic">
+					<img src="./img/328338328_259356716434132_6652962190749001897_n.jpg">
+				</div>
+				<div class="txt">
+					<a href="./product.html">
+						<h4>
+						奪魂鋸 Saw 12吋 可動公仔 比利 殺人魔 驚悚電影<br>
+						$1,600
+						</h4>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/8702dcdd8c400a201b6c8716b230fa81.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						Mezco大力水手大型可動公仔 2001年 KFS卜派 12吋<br>
+						$99,999
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/tw-11134207-7qul3-lfg4bksbjv9p70.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						不二家 牛奶妹 Peko 丹寧造型人偶 全新未拆<br>
+						$900
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/01aab690352e484d6abec0ca1c46c830.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						尤達大師 星際大戰 樂高 公仔<br>
+						$550
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/341751517_913725649839053_1124895505074771540_n.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						1970年代 小木偶存錢筒 皮諾丘<br>
+						$2,050
+
+					</h4>
+				</div>
+			</div>
+			<div class="card">
+				<div class="pic">
+					<img src="./img/tw-11134207-7qul1-lfjyoo1visbu74.jpg">
+				</div>
+				<div class="txt">
+					<h4>
+						80年代 Heman 太空超人 Masters of the Universe<br>
+						NT860
+
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="shopping">
+			<div class="shopping1">
+				<ul>
+					<li><h4>購物</h4></li>
+					<li>全部商品</li>
+					<li>會員登入</li>
+					<li>購物說明</li>
+				</ul>
+			</div>
+			<div class="shopping2">    
+				<ul>
+					<li><h4>幫助</h4></li>
+					<li>關於我們</li>
+					<li>隱私政策</li>
+					<li>會員權益</li>
+					<li>聯絡我們</li>
+				</ul>
+			</div>
+			<div class="shopping3">    
+				<ul>
+					<li><h4>客戶服務</h4></li>
+					<li>聯絡我們</li>
+					<li>支付方式</li>
+					<li>積分獎勵</li>
+				</ul>
+			</div>
+			<div class="shopping4">    
+				<ul>
+					<li><h4>追蹤我們</h4></li>
+					<i class="fa-brands fa-instagram"></i>
+					<i class="fa-brands fa-square-facebook"></i>
+				</ul>
+			</div>
+		</div> 
+		<div class="copyright">
+			<p>
+				Copyright © 2023 WiEdu Co. 保留所有權利。
+				隱私政策 使用條款
+				<br>
+				本網站為緯育前端班作品
+			</p>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
+
+<script>
+	$('.owl-carousel').owlCarousel({
+		items: 1,
+		margin: 10,
+		autoHeight: true,
+		autoHeightClass: 'owl-height'
+	});
+</script>
+
+
+</body>

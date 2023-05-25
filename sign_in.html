@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <script src="./OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="./css/OcasO-VINTAGE.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body {
+        background: #F8F3EE;
+        box-sizing: border-box;
+        padding-top: 10vh;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0 auto;
+        }        
+        /* Tabs*/
+        .tabs {
+        display: flex;
+        flex-wrap: wrap; 
+        width: 900px;
+        margin: auto;
+        }
+        .tabs label {
+        order: 1;
+        display: block;
+        padding: 1rem 2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+        background: #8D7B68;
+        background: transparent;
+        border-radius: 5px;
+        font-weight: bold;
+        /* transition: background ease 0.2s; */
+        }
+       .tabs label span{
+        font-size: 5px;
+        }
+        .tabs .tab {
+        order: 99; 
+        flex-grow: 1;
+        width: 700px;
+        height: 500px;
+        box-sizing: border-box;
+        display: none;
+        padding: 2rem;
+        background: #fff;
+        }
+        
+        .login-box {
+           padding: 600px;
+        }
+        .tabs input[type="radio"] {
+            display: none;
+        }
+        .tabs input[type="radio"]:checked + label {
+            background: #fff;
+        }
+        .tabs input[type="radio"]:checked + label + .tab {
+            display: block;
+        }
+        #checkbox:checked {
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 45em) {
+        .tabs .tab,
+        .tabs label {
+            order: initial;
+        }
+        .tabs label {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 0.2rem;
+        }
+    }
+
+        /**
+        * Generic Styling
+        */
+
+    /*  */
+    #login-box {
+    position: relative;
+    margin: 5% auto;
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 2px;
+    }
+
+    .left {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+    border-bottom: 2px solid #16a085;
+    color: #16a085;
+    transition: 0.2s ease;
+    }
+
+    input[type="submit"] {
+    margin-top: 28px;
+    margin-left: 30px;
+    width: 120px;
+    height: 32px;
+    background: #8D7B68;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+    }
+
+    input[type="submit"]:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+    }
+
+    .or {
+    position: absolute;
+    top: 10px;
+    left: 280px;
+    width: 2px;
+    display: grid;
+    align-content: center;
+    height: 380px;
+    background: #DDD;
+    line-height: 40px;
+    text-align: center;
+    }
+
+    .right {
+    position: absolute;
+    top: 0;
+    right: -80px;
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background: url('https://goo.gl/YbktSj');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 2px 2px 0;
+    }
+
+    .right .loginwith {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #FFF;
+    text-align: center;
+    }
+
+    button.social-signin {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+    }
+
+    button.social-signin:hover,
+    button.social-signin:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+    }
+
+    button.social-signin:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+    }
+
+    button.social-signin.facebook {
+    background: #32508E;
+    }
+
+    button.social-signin.twitter {
+    background: #55ACEE;
+    }
+
+    button.social-signin.google {
+    background: #DD4B39;
+    }
+    /* 手機登入 */
+    .tab{
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .tab img{
+        width: 200px;
+        margin: 30px;
+    }
+    .footer{
+        margin-top: 130px;
+    }
+    .input-data{
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./index.html">  
+            <img src="./img/去背/logo.png" alt="OcasO VINTAGE" ></a>
+        </div>
+            <div class="nav">
+                <div class="nav_main">
+                    <ul class="onav">
+                        <li><a href="#information">關於我們</a></li>
+                        <li><a href="#owl">熱門商品</a></li>
+                        <li><a href="./series role.html">系列角色</a></li>
+                        <li><a href="./index.html">顧客評論</a></li>
+                    </ul>
+
+                    <div class="nav_sub">
+                        <ul class="top">
+                            <li class="onav_contact">
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    搜尋
+                                </a>
+                            </li>
+                            <li class="navi_contact">
+                                <a href="./sign_in.html" target="_blank">
+                                    <i class="fa-solid fa-user"></i>
+                                    會員
+                                </a>
+                            </li>
+                            <li class="navi_contact">
+                                <a href="./ask.html" target="_blank">
+                                    <i class="fa-solid fa-comments"></i>
+                                    詢問
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="bottom">
+                            <li class="navi_contact">
+                                <a href="#" target="_blank">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    購物車
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </header>
+
+ 
+
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+                <label for="tabone">會員登入</label>
+                    <div class="tab">
+                        <div id="login-box">
+                            <div class="left">
+                              <h3>登入</h3>
+                              <input type="text" name="email" placeholder="*email" />
+                              <input type="password" name="password" placeholder="*密碼" />
+                              <label><input type="checkbox"><span>記住我</span></label>  
+                              <input type="submit" name="signup_submit" value="登入" />
+                            </div>
+                            
+                            <div class="right">
+                              <!-- <span class="loginwith">Sign in with<br />social network</span> -->
+                              
+                              <button class="social-signin facebook">facebook</button>
+                              <button class="social-signin twitter">Twitter</button>
+                              <button class="social-signin google">Google+</button>
+                            </div>
+                            <div class="or"></div>
+                        </div>
+                    </div>
+            
+            <input type="radio" name="tabs" id="tabtwo">
+                <label for="tabtwo">加入會員</label>
+                    <div class="tab">
+                        <h3>加入專屬會員</h3>
+                        <h5>我們將發送簡訊驗證碼至您的手機內</h5>
+                        <div class="pic">
+                            <img src="./img/Group 192 (1).png" alt="">
+                        </div>
+                        
+                        <span class="input-data">
+                            <input type="text" id="register_ac" name="register_ac" value="" maxlength="10" autocomplete="off" placeholder="*手機" />
+                            <button class="social-signin google">下一步</button>
+                        </span>
+                        <h6>收到簡訊驗證碼後，請依照步驟完成驗證註冊</h6>
+                    </div>
+                </label>    
+            </div>  
+
+
+<div class="footer">
+    <div class="shopping">
+        <div class="shopping1">
+            <ul>
+                <li><h3>購物</h3></li>
+                <li>全部商品</li>
+                <li>會員登入</li>
+                <li>購物說明</li>
+            </ul>
+        </div>
+        <div class="shopping2">    
+            <ul>
+                <li><h3>幫助</h3></li>
+                <li>關於我們</li>
+                <li>隱私政策</li>
+                <li>會員權益</li>
+                <li>聯絡我們</li>
+            </ul>
+        </div>
+        <div class="shopping3">    
+            <ul>
+                <li><h3>客戶服務</h3></li>
+                <li>聯絡我們</li>
+                <li>支付方式</li>
+                <li>積分獎勵</li>
+            </ul>
+        </div>
+        <div class="shopping4">    
+            <ul>
+                <li><h3>追蹤我們</h3></li>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+            </ul>
+        </div>
+    </div> 
+    <div class="copyright">
+        <p>
+            Copyright © 2023 WiEdu Co. 保留所有權利。
+            隱私政策 使用條款
+            <br>
+            本網站為緯育前端班作品
+        </p>
+    </div>
+</div>        
+                 
+</body>
+</html>
